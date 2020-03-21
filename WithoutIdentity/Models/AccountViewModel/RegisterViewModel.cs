@@ -6,13 +6,13 @@ namespace WithoutIdentity.Models.AccountViewModel{
         [Required, EmailAddress, Display(Name="E-mail")]
         public string Email{get;set;}
 
-        [Required, DataType(DataType.Password ), Display(Name="Senha")]
+        [Required, DataType(DataType.Password), Display(Name="Senha")]
         [StringLength(15, ErrorMessage ="O campo {0} deve ter no mínimo {2} e no máximo {1} caracteres.", MinimumLength=4)]
-        public string Senha{ get;set;}
+        public string Password { get;set;}
         
-        [Required, DataType(DataType.Password ), Display(Name="Cconfirmar Senha")]
+        [Required, DataType(DataType.Password), Display(Name="Confirmar Senha")]
         [Compare("Password", ErrorMessage="As Senhas devem ser iguais")]
-        public string ConfirmarSenha{ get;set;}
+        public string ConfirmPassword { get;set;}
          
     }
 
